@@ -24,8 +24,19 @@ int main() {
 }
 
 void solution() {
-	int a[3];
-	cin >> a[0] >> a[1] >> a[2];
-	sort(a, a+3);
-	cout << a[2]*10+a[1] + a[0];
+	int n, m, x, y;
+	cin >> n >> m >> x >> y;
+	int max_x = -101;
+	int min_y =  101;
+	int xi, yi;
+	for(int i = 0; i < n; ++i) cin >> xi, max_x = max(max_x, xi);
+	for(int i = 0; i < m; ++i) cin >> yi, min_y = min(min_y, yi);
+	bool found = 0;
+	for(int z = max_x+1; z <= min_y; ++z) {
+		if(z > x and z <= y) {
+			found = 1;
+			break;
+		}
+	}
+	cout << (found ? "No War" : "War");
 }

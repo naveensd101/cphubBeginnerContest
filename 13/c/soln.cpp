@@ -23,9 +23,19 @@ int main() {
     return 0;
 }
 
+bool check(int n) {
+	int prev = n%10;
+	while(n) {
+		int t = n%10;
+		n/=10;
+		if(t != prev) return 0;
+		prev = t;
+	}
+	return 1;
+}
 void solution() {
-	int a[3];
-	cin >> a[0] >> a[1] >> a[2];
-	sort(a, a+3);
-	cout << a[2]*10+a[1] + a[0];
+	int n;
+	cin >> n;
+	while(!check(n)) n++;
+	cout << n;
 }

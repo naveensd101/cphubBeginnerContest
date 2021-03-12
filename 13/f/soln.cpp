@@ -24,8 +24,12 @@ int main() {
 }
 
 void solution() {
-	int a[3];
-	cin >> a[0] >> a[1] >> a[2];
-	sort(a, a+3);
-	cout << a[2]*10+a[1] + a[0];
+	int n;
+	cin >> n;
+	if(n == 1) cout << "Hello World";
+	else {
+		int a, b;
+		cin >> a >> b;
+		cout << a + b;
+	}
 }

@@ -24,8 +24,13 @@ int main() {
 }
 
 void solution() {
-	int a[3];
-	cin >> a[0] >> a[1] >> a[2];
-	sort(a, a+3);
-	cout << a[2]*10+a[1] + a[0];
+	int n, T, c, t;
+	cin >> n >> T;
+	int ans = 1001;
+	for(int i = 0; i < n; ++i) {
+		cin >> c >> t;
+		if(t <= T) ans = min(ans, c);
+	}
+	if(ans == 1001) cout << "TLE";
+	else cout << ans;
 }

@@ -24,8 +24,7 @@ int main() {
 }
 
 void solution() {
-	int a[3];
-	cin >> a[0] >> a[1] >> a[2];
-	sort(a, a+3);
-	cout << a[2]*10+a[1] + a[0];
+	string n;
+	cin >> n;
+	for(char c: n) cout << ( c == '1' ? '9' : '1');
 }
